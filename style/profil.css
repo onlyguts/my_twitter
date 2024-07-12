@@ -1,0 +1,538 @@
+:root {
+
+    --premiere-color: #e4e4e4;
+    --deuxieme-color: #00000002; /* nav bar */
+    --troisieme--color: #f9f9f9; /* main + profil */
+    --quatrieme--color: #7a65aa; /* button and input*/
+    --blanc: rgb(255, 255, 255); /* post + tendance list */
+    --noir: black; /* font color*/
+    --backgroundC: #ffffff; /* background color*/
+    --grey: rgba(0, 0, 0, 0.161);
+}
+
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--noir)
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0;
+    list-style: none;
+}
+
+
+body {
+
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--backgroundC);
+
+}
+
+/* ---------Sidebar styles------- */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--deuxieme-color);
+    padding: 10px;
+    margin-left: 11%;
+}
+
+.sidebar a {
+    display: flex;
+    color: var(--noir);
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 25px;
+
+}
+
+
+.nav-top img {
+    margin-left: 20px;
+    margin-top: 25px;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.sidebar a:hover {
+    background-color: var(--premiere-color);
+    transition: background-color 0.2s ease;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 90px;
+    height: 100px;
+    padding-bottom: 10px;
+}
+
+.profil {
+    flex-direction: row;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 6px;
+    background-color: var(--troisieme--color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.nom-user {
+    margin-right: 90px;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+
+.nom-profil {
+    font-size: 10px;
+    color: gray;
+    margin-left: 3px;
+}
+
+.profil img {
+    margin: auto;
+}
+
+.profil:hover {
+    transform: translateY(-5px);
+}
+
+.image-profil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #eeeeee;
+    margin-bottom: 15px;
+}
+
+.nom-profil {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.bio-profil {
+    color: #666;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+
+/* Main Content styles */
+.main-content {
+    background-color: var(--troisieme--color);
+    justify-content: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+}
+
+.mise-en-page {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+/*----POST-----*/
+
+.create-post {
+    margin-bottom: 20px;
+}
+
+#postContent {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: vertical;
+}
+
+#publishPost {
+    background-color: var(--quatrieme--color);
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#publishPost:hover {
+    background-color: #45a049;
+}
+
+.profilpost {
+    display: flex;
+}
+
+.nomutilisateur {
+    margin-left: 10px;
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+.pseudo {
+    margin-left: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    color: grey;
+    margin-bottom: 3px;
+}
+
+.photodeprofil img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.option {
+    margin-top: 12px;
+    margin-left: 72%;
+}
+
+.post {
+    background-color: var(--blanc);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+
+.borderpostcontent {
+    border-top: solid var(--grey);
+    border-bottom: solid var(--grey);
+}
+
+.recommendation-button {
+    display: block;
+    width: max-content;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: var(--quatrieme--color);
+    color: var(--blanc);
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/*---likeRTcomment-----*/
+
+.smalllink {
+    display: flex;
+    margin-left: auto;
+    flex-direction: row;
+}
+
+.smalllink a {
+    display: flex;
+    margin-right: 15px;
+}
+
+.nombredeRT,
+.nombredelike,
+.nombredecom {
+    font-size: 10px;
+    color: var(--deuxieme-color);
+}
+
+.gifclick img {
+    margin-top: 7px;
+    width: 15px;
+    height: 15px;
+    margin-left: 2%;
+    margin-right: 3px;
+}
+
+/* Right Sidebar styles */
+
+.right-sidebar {
+    width: 290px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    background-color: var(--deuxieme-color);
+    height: 100vh;
+    margin-right: 9%;
+}
+
+.search-bar {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: calc(100% - 20px);
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.suggestion p {
+    font-size: 9px;
+    margin: 0;
+    padding-left: 4px;
+}
+
+.background {
+    background-color: var();
+    border-radius: 50px;
+    padding: 3%;
+}
+
+.marging {
+    margin-bottom: 1.5%;
+    margin-top: 3%;
+}
+
+
+.tendance-list {
+    display: block;
+    padding: 5px;
+    color: var(--noir);
+    text-decoration: none;
+    margin: 7px;
+    background-color: var(--blanc);
+    font-size: 17px;
+    text-align: start;
+    font-weight: bold;
+}
+
+.tendance-list a {
+    margin-left: 10px;
+}
+
+.tendance-list p {
+    margin-left: 2px;
+}
+
+.tendance {
+    height: auto
+}
+
+.all-sugestion {
+    margin-bottom: 10px;
+    background-color: red;
+}
+
+.sugguser {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Responsive Styles */
+
+@media only screen and (max-width: 1419px) {
+    .sidebar {
+        margin-left: 5%;
+    }
+
+    .right-sidebar {
+        margin-right: 3%;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .right-sidebar {
+        display: none;
+    }
+
+    .mise-en-page {
+        margin-right: 3%;
+        justify-content: right;
+    }
+
+    .main-content {
+        width: 70%;
+    }
+
+    .sidebar {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+
+
+    .sidebar {
+        width: auto;
+    }
+
+    .main-content {
+        width: 85%;
+    }
+
+    .profil {
+        width: 10%;
+    }
+
+    .sidebar p {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .profil {
+        display: none;
+    }
+
+    .nav-top img {
+        margin: 0;
+        margin-bottom: 50%;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .mise-en-page {
+        margin: 0;
+    }
+
+    .nav-top img {
+        margin: 0;
+        margin-bottom: 50%;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/*-------squelette-------*/
+
+/*-----dark mode------*/
+
+/*------profil.css-----*/
+
+
+.headerprofileimage {
+    margin-top: 10px;
+    position: relative;
+}
+
+#headerimage {
+    width: 100%;
+    height: 300px;
+    border: 4px solid rgb(21, 32, 43);
+}
+
+#profilepic {
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: 200px;
+    left: 10px;
+    border: 4px solid rgb(21, 32, 43);
+}
+
+.editprofile {
+    margin-top: 5px;
+    float: right;
+    border: 1px solid rgb(155, 157, 160);
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 5px;
+    color: white;
+    background-color: var(--quatrieme--color);
+}
+
+.bio {
+    padding-top: 5px;
+    margin-top: 60px;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+.handle {
+    line-height: 10px;
+    margin-bottom: 10px;
+}
+
+.followers {
+    margin-right: 15px;
+}
+
+.follow {
+    display: flex;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-bottom: 3%;
+    border-bottom: solid var(--grey);
+}
+
+.heading p {
+    display: block;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 60px;
+    border: solid 1px black;
+}
+
+.tweet {
+    display: flex;
+    margin: 10px 0;
+}
+
+.tweetinfo {
+    margin-top: 10px;
+    margin-right: -10px;
+}
+
+.tweetcontent {
+    margin-top: 5px;
+    margin-right: 20px;
+}

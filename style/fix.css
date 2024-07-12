@@ -1,0 +1,12 @@
+.popup-content1 form,
+.popup-content2 form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-content1 input[type=submit],
+.popup-content2 input[type=submit] {
+    width: 25%;
+    margin: 10px auto;
+    color: black;
+}

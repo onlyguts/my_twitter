@@ -1,0 +1,118 @@
+
+.colonne1 button,
+.colonne2 button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px;
+    border: blue solid 1px;
+    color: blue;
+    background-color: #fff;
+}
+
+#popup-overlay1 .popup-content1 .followingPopup,
+#popup-overlay2 .popup-content2 .followingPopup{
+    display: flex;
+    flex-direction: row;
+}
+
+#popup-overlay1 .popup-content1 .followingPopup img,
+#popup-overlay2 .popup-content2 .followingPopup img {
+  max-width: 10%;
+  max-height: 10%;
+  border-radius: 50%;
+}
+
+.followers, .following {
+    cursor: pointer;
+    background-color: white;
+    padding: 4px 7px;
+    border-radius: 10%;
+}
+
+
+:root {
+
+    --premiere-color: #e4e4e4;
+    --deuxieme-color: #00000002; /* nav bar */
+    --troisieme--color: #f9f9f9; /* main + profil */
+    --quatrieme--color: #7a65aa; /* button and input*/
+    --blanc: rgba(255, 255, 255, 0.057); /* post + tendance list */
+    --noir: black; /* font color*/
+    --backgroundC: #ffffff; /* background color*/
+    --grey: rgba(0, 0, 0, 0.161);
+  }
+
+
+
+.conteneur {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    min-height: 100%;
+}
+
+img {
+    width: 200px;
+}
+
+
+.colonne1,
+.colonne2 {
+    display: flex;
+    margin: auto;
+}
+
+
+#popup-overlay1,
+#popup-overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+#popup-overlay1.open,
+#popup-overlay2.open {
+    display: block !important;
+}
+
+.popup-content1,
+.popup-content2 {
+    max-width: 600px;
+    width: 30%;
+    padding: 30px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    background-color: var(--premiere-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup-content1 input[type=submit],
+.popup-content2 input[type=submit] {
+    color: var(--premiere-color);
+    border-radius: 10px;
+    padding: 5px 10px;
+    width: 25%;
+}
+
+.popup-exit {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.popup-content1 form {
+    display: flex;
+    flex-direction: column;
+    color: var(--noir);
+}
