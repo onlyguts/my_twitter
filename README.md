@@ -12,10 +12,10 @@ My Twitter
    ```
 
 2. **Configurer les paramètres**:
-    Configurez votre `./mysql.php` avec votre base de données.
+    Configurez votre `./mysql/mysql.php` avec votre base de données.
 
 3. **Configurer la base de données**:
-   Allez dans `./sql/save.php` et insérez le .sql dans votre base de données.
+   Allez dans `./save_sql/sql1.sql` et insérez le .sql dans votre base de données.
 
 4. **Fini**:
     Enjoy
