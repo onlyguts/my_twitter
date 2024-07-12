@@ -1,14 +1,13 @@
 My Twitter
 
 ## 📦 Dépendances
-- [MySQL](https://www.mysql.com/en/)
-- [MAMP](https://www.mamp.info/en/downloads/) ou autres !
+- [MAMP](https://www.mamp.info/en/downloads/) (ou autres)
 
 ## 🚀 Commencer l'installation du projet
 
 1. **Clone le Repo**:
    ```bash
-   git clone https://github.com/onlyguts/my_cinema.git
+   git clone https://github.com/onlyguts/my_twitter.git
    ```
 
 2. **Configurer les paramètres**:
